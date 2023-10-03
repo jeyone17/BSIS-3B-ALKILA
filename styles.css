@@ -8,20 +8,23 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 main {
     flex: 1;
     padding: 20px;
 }
+
 nav {
     color: white;
 }
+
 nav a {
     color: #fff; 
     text-decoration: none; 
     margin: 0 10px;
-    text-align:left; 
-    
+    text-align:left;     
 }
+
 .sign-up-sign-in nav ul{
     font-family: sans-serif;
     font-size: 12px;
@@ -29,8 +32,9 @@ nav a {
     margin-right: 10;
     padding: 0;
     display: flex;
-    
 }
+
+/*--Header--*/
 .header{
     background-color: #698EB8;
     color: #fff;
@@ -47,17 +51,20 @@ nav a {
     align-items: top; 
     margin-right: 20px;
 }
+
 .logo-and-name i{
     color: #000;
     font-size: 24px;
     margin-right: 20px;
     margin-left: 20px;
 }
+
 .logo{
     width: 30px;
     height: 30px;
     margin-right: 20px;
 }
+
 .app-name {
     background-color: transparent; 
     padding: 0; 
@@ -66,6 +73,7 @@ nav a {
     font-family: sans-serif;
     font-style: italic;
 }
+
 .tagline {
     font-family: sans-serif;
     font-size: 30px;
@@ -73,6 +81,7 @@ nav a {
     left: 330px;
     top: 120px;
 }
+
 .user-profile {
     margin-right: 20px;
     margin-top: 12px;
@@ -83,11 +92,13 @@ nav a {
     font-size: 24px;
     
 }
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .search-bar{
     width: 400px;
     max-width: 700px;
@@ -101,6 +112,7 @@ nav a {
     margin-top: 5px;
     margin-bottom: 25px;
 }
+
 .search-bar input{
     background: transparent;
     flex: 1;
@@ -110,12 +122,15 @@ nav a {
     font-size: 12px;
     color: #000000;
 }
+
 ::placeholder {
    color: #000000;
 }
+
 .search-bar button i{
     width: 20px;
 }
+
 .search-bar button{
     border: 0;
     border-radius: 50%;
@@ -126,6 +141,7 @@ nav a {
     cursor: pointer;
 }
 
+/*--Footer--*/
 footer {
     background-color: #698eb8;
     padding: 5px;

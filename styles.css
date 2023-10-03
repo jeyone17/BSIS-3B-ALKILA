@@ -141,6 +141,21 @@ nav a {
     cursor: pointer;
 }
 
+/*--Images--*/
+.img {
+  display: inline-block;
+  margin: 30px 5px 0 5px;
+}
+
+.img:last-child {
+  margin-right: 0;
+}
+
+.img img {
+  width: 301px;
+  height: 206px;
+}
+
 /*--Footer--*/
 footer {
     background-color: #698eb8;

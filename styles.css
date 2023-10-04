@@ -79,7 +79,7 @@ nav a {
     font-size: 30px;
     position: absolute;
     left: 330px;
-    top: 120px;
+    top: 90px;
 }
 
 .user-profile {
@@ -140,6 +140,27 @@ nav a {
     color: #ffffff;
     cursor: pointer;
 }
+/*--Explore--*/
+.explore a {
+    text-decoration-line: none;
+    font-family: sans-serif;
+    margin-left: 550px;
+    width: 154px;
+    height: 35px;
+    border-radius: 20px;
+    background: #0F307D;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    font-size: 1.25em;
+   
+}
+.explore a:hover {
+    background-color: #698EB8;
+} 
 
 /*--Images--*/
 .img {

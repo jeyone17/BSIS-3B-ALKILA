@@ -183,3 +183,9 @@ footer {
     bottom: 5px;    
 }
 
+.star-button {
+    display: inline-block;
+    font-size: 24px;
+    color: gold;
+    cursor: pointer;
+}

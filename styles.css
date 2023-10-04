@@ -144,7 +144,7 @@ nav a {
 .explore a {
     text-decoration-line: none;
     font-family: sans-serif;
-    margin-left: 550px;
+    margin-left: 525px;
     margin-top: 10px;
     width: 154px;
     height: 35px;
@@ -177,6 +177,10 @@ nav a {
 border-radius: 25px;
   width: 281px;
   height: 186px;
+}
+
+.property-listing {
+  margin-left: 35px;
 }
 
 /*--Footer--*/

@@ -66,12 +66,23 @@ nav a {
 }
 
 .app-name {
-    background-color: transparent; 
-    padding: 0; 
-    margin: 0; 
-    font-size: 24px;
-    font-family: sans-serif;
-    font-style: italic;
+  background-color: transparent;
+  color: #f0e928;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.app-name2 {
+  background-color: transparent;
+  color: #040f62;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-style: italic;
 }
 
 .tagline {

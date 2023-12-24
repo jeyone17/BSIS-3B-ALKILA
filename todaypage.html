@@ -1,49 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>ALKILA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alkila - Listing</title>
   <link rel="stylesheet" href="todaypage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
- 
-  
-      </header>
-
-
-  <main>
-  <body>
-   
-    <h2> Your Reservations</h2>
-   
-    <div class="user-menu">
-    <nav>
-        <ul>
-            <li><a href="todaypage.html">Home</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">Notifications</a></li>
-            <li><a href="visitlogs.html">Visit Log</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="listing.html">Listing</a></li>
-            <li><a href="#">Reservations</a></li>
-            <li><a href="#">Transactions</a></li>
-            <li><a href="review.html">Reviews</a></li>
-            <li><a href="#">Listing Issues</a></li>
-    </ul>
-</nav>
-</div>
-
-<div class="menu">
-    <nav>
-        <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="log-in.html">Log out</a></li>
-        </ul>
-    </nav>
-</div>        
-
-    </body>
-  </main>
-
-  
+  <div id="header">
+    <div class="left">
+        <div class="sidebar-button">
+            <i class="fas fa-bars fa-3x"></i>
+        </div>
+      <img src="./Images/user.png" alt="">
+    </div>
+    <div class="logo-con">
+      <a href="/">
+      <img class="logo" src="./logo/weblogo.png" alt="" srcset="">
+      <span class="app-name">ALK</span>
+      <span class="app-name2">ILA</span>
+    </a>
+    </div>
+  </div>
+  <div class="main-container">
+    <div id="sidebar">
+        <div class="top sidebar-links">
+            <a class="sidebar-link" href="index.html">Home</a>
+            <a class="sidebar-link" href="#">Messages</a>
+            <a class="sidebar-link" href="#">Notifications</a>
+            <a class="sidebar-link active" href="todaypage.html">Today</a>
+            <a class="sidebar-link" href="visitlogs.html">Visit Log</a>
+            <a class="sidebar-link" href="#">Insights</a>
+            <a class="sidebar-link" href="listing.html">Listing</a>
+            <a class="sidebar-link" href="todaypage.html">Reservations</a>
+            <a class="sidebar-link" href="#">Transactions</a>
+            <a class="sidebar-link" href="#">Listing Issues</a>
+        </div>
+        <div class="bottom sidebar-links">
+            <a class="sidebar-link" href="#">Help Center</a>
+            <a class="sidebar-link" href="#">Log out</a>
+        </div>
+      </div>
+      <div id="today">
+        <div class="complete-listing">
+            <a href="#">Complete your listing</a>
+        </div>
+        <div class="reservations">
+            <div class="title">
+                <h1>Your reservations</h1>
+                <a href="#">All reservations (1)</a>
+            </div>
+            <div class="search">
+                <input type="text" name="listingsearch" id="listingsearch">
+                <img src="./Images/Search.png" alt="">
+            </div>
+            <div class="tags">
+                <a href="#">Checking out (0)</a>
+                <a href="#">Currently Renting (1)</a>
+                <a href="#">Arriving soon (0)</a>
+                <a href="#">Upcoming (0)</a>
+                <a href="#">Pending review (0)</a>
+            </div>
+            <div class="reservation-list">
+                <div class="reservation-box">
+                    <div class="reservation-data">
+                        <div class="user-detail">
+                            <div class="namestatus">
+                                <div class="status">
+                                    Currently renting
+                                </div>
+                                <div class="username">
+                                    catriona_grey01
+                                </div>
+                            </div>
+                                <img class="profile" src="./Images/profile.svg" alt="">
+                        </div>
+                        <div class="buildingroom">
+                            <div class="building">A&L Building</div>
+                            <div class="room">Room 206</div>
+                        </div>
+                        <div class="namedate">
+                            <div class="firstname">
+                                Catriona
+                            </div>
+                            <div class="date">
+                                Nov 16 2023 - Nov 21 2023
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="message">Message</a>
+                        <div class="seperator"></div>
+                        <a href="#" class="call">Call</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./todaypage.js"></script>
 </body>
 </html>

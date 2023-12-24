@@ -1,67 +1,238 @@
-body {
-    font-family: sans-serif;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+h1{
+  margin: 0;
+}
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #698EB8;
+  min-height: 150px;
+}
+#header .left{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo{
+    width: auto;
+    height: 62px;
+}
+#header a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.app-name {
+  background-color: transparent;
+  color: #f0e928;
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.app-name2 {
+  background-color: transparent;
+  color: #040f62;
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+  .main-container{ 
+    flex: 1 1 auto;
+    display: flex;
+  }
+
+  #sidebar{
+    width: 100%;
+    max-width: 15%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    background-color: #040f62;
+    color: white;
+    transition: all 1000ms ease;
+  }
+  #sidebar.close{
+    transform: translateX(-100%);
+  }
+  #sidebar.open{
+    width: 100%;
+    transform: translateX(0);
+  }
+  #sidebar.nowidth{
+    width: 0;
+  }
+  #sidebar.close .sidebar-links{
+
+    transform: translateX(-100%);
+  }
+  #sidebar.open .sidebar-links{
+    transform: translateX(0);
+
+  }
+  #sidebar:not(.open) .sidebar-links,  #sidebar:not(.open) .sidebar-links a{
+    transform: translateX(-300%);
+    transition-delay: 600ms;
+  }
+
+  .main-container:has(#sidebar:not(.open)) #today{
+    width: 100vw;
+  }
+
+  #sidebar .sidebar-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 30px;
   }
   
-  
-  nav {
+  #sidebar .sidebar-link.active{
+    font-weight: bold;
+  }
+  #today{
+    padding: 30px 50px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1000ms ease;
+  }
+  #today .complete-listing{
     text-align: right;
   }
-  
-  nav a {
-    text-decoration: none;
-    color: black;
-    padding: 0.5rem;
-  }
-  
-  main {
-    padding: 1rem;
-  }
-  
-  .user-menu {
-    float: left;
-    width: 200px;
-    margin-right: 1rem;
-  }
-  
-  .user-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align:left;
-  }
-  
-  .user-menu li {
-    padding: 0.5rem;
-
-  }
-  
-  .user-menu li:hover {
-    background-color: #eee;
-  }
-
-  .menu {
-    width: 300px;
-    margin-right: 1rem;
-  }
-
-.menu ul {
-    clear: left;
-    list-style-type: none;
-    padding: 25px;
-    margin: -23px;
-    text-align: left;
-  }
-  
-  .menu li {
-    padding: 0.5rem;
+  #today .complete-listing a{
     
-
+    font-size: 20px;
+    background-color: #D9D9D9;
+    padding: 1rem;
+    border-radius: 100px;
   }
-  
-  .menu li:hover {
-    background-color: #eee;
+  #today .reservations{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #today .reservations .title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+  }
+  #today .reservations .title h1{
+    font-size: 40px;
+  }
+  #today .reservations .title a{
+    font-size: 20px;
+  }
+  #today .search{
+    display: flex;
+    background-color: #D9D9D9;
+    padding: 0 0 0 20px;
+    border-radius: 100px;
+    width: 600px;
+    justify-content: space-between;
+  }
+  #today .search img{
+    background-color: #0B254D;
+    border-radius: 50%;
+    padding: 4px;
+    width: 40px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  #today .search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+  }
+  #today .search input:focus{
+    border: none;
+  }
+  #today .tags{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+  }
+  #today .tags a{
+    padding: 1rem;
+    border-radius: 100px;
+    border: 1px solid black;
   }
 
-  h2 {
-    text-align: middle;
+  #today .reservation-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #today .reservation-box .reservation-data{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  #today .reservation-box{
+    width: 450px;
+    border: 1px solid black;
+  }
+  #today .reservation-box .user-detail{
+    display: flex;
+    justify-content: space-between;
+  }
+  #today .reservation-box .user-detail .status{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #today .reservation-box .building{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #today .reservation-box .room{
+    font-size: 20px;
+    font-style: italic;
+  }
+  #today .reservation-box .namedate{
+    font-size: 30px;
+  }
+  #today .reservation-box .action{
+    width: 100%;
+    display: flex;
+    border-top: 1px solid black;
+  }
+  #today .reservation-box .action .seperator{
+    width: 1px;
+    background-color: black;
+  }
+  #today .reservation-box .action a{
+    width: 45%;
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
   }

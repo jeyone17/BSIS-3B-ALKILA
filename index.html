@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Alkila - Homepage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Alkila</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="style1.css" rel="stylesheet">
 </head>
+
 <body>
-    <header class="header">
-        <div class="logo-and-name">
-            <i class="fas fa-bars fa-3x"></i>
-            <img src="logo/weblogo.png" alt="Logo" class="logo">
-            <h1 class="app-name">ALK</h1>
-            <h1 class="app-name2">ILA</h1>
-            <h2 class="tagline">Why buy when you can rent a perfect space?</h2>
-        </div>
+  <header class="header">
+    <div class="logo-and-name">
+      <i class="fas fa-bars fa-3x"></i>
+      <div class="logo-con">
+        <img src="Images/weblogo.png" alt="Logo" class="logo">
+        <h1 class="app-name">ALK</h1>
+        <h1 class="app-name2">ILA</h1>
+      </div>
+    </div>
 
-        <div class="container"> 
-            <form action="" class="search-bar">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
+    <div class="sign-up-sign-in">
+      <nav>
+        <ul>
+          <a href="log-in.html">Become an Owner</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="log-in.html">Sign In</a>
+        </ul>
+      </nav>
+      <div class="user-profile">
+        <img src="./Images/sign-in-img.png" alt="">
+      </div>
+    </div>
 
-        <div class="sign-up-sign-in">
-        <nav>
-            <ul>
-                <a href="#">Become an Owner</a>
-                <a href="signup.html">Sign Up</a>
-                <a href="#">Sign In</a>
-            </ul>
-        </nav>
-        </div>
-        <div class="user-profile">
-            <i class="fas fa-user-circle fa-lg"></i>
-        </div>
-        
-    </header>
-    
+  </header>
 
-    <main>
-        <!--Gallery-->
-        <section class="property-listing">
-            
-         <!--Property 1-->
-            <div class="img"><a href="#"><img
-                  src="https://i0.wp.com/rmn.ph/wp-content/uploads/2017/10/bh.jpg?w=584&ssl=1?aki_policy=x_medium"></a>
-                <div class="description">
-                  <h3>A&L Building</h3>
-                  <span class="star-button"><i class="fas fa-star"></i></span>
-                  <p3>4.92</p3>
-                  <br>
-                  <p1>₱ 3,000/month</p1>
-                </div>
-            </div>
+  <div class="search">
 
-    <!--Property 2-->
+      <form action="" class="search-bar">
+        <input type="text" placeholder="Search..." name="search">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+      <div class="tagline">
+        Why buy when you can rent the perfect space?
+      </div>
+  </div>
+
+  <main>
+    <!--Gallery-->
+
+    <section class="property-listing">
+
+      <!--Property 1-->
       <div class="img"><a href="#"><img
-          src="https://media.karousell.com/media/photos/products/2022/01/30/4_stories_boarding_house_just_a_walk_to_john_b_lacson_1643491197_83aaa2ebe?aki_policy=x_medium"></a>
+            src="https://i0.wp.com/rmn.ph/wp-content/uploads/2017/10/bh.jpg?w=584&ssl=1?aki_policy=x_medium"></a>
+        <div class="description">
+          <h3>A&L Building</h3>
+          <span class="star-button"><i class="fas fa-star"></i></span>
+          <p3>4.92</p3>
+          <br>
+          <p1>₱ 3,000/month</p1>
+        </div>
+      </div>
+
+      <!--Property 2-->
+      <div class="img"><a href="#"><img
+            src="https://media.karousell.com/media/photos/products/2022/01/30/4_stories_boarding_house_just_a_walk_to_john_b_lacson_1643491197_83aaa2ebe?aki_policy=x_medium"></a>
         <div class="description">
           <h3>Joy Apartment</h3>
           <span class="star-button"><i class="fas fa-star"></i></span>
@@ -67,9 +74,8 @@
         </div>
       </div>
 
-    <!--Property 3-->
-      <div class="img"><a href="#"><img
-          src="Images/Property3.jpg?aki_policy=x_medium"></a>
+      <!--Property 3-->
+      <div class="img"><a href="#"><img src="Images/Property3.jpg?aki_policy=x_medium"></a>
         <div class="description">
           <h3>Sad Building</h3>
           <span class="star-button"><i class="fas fa-star"></i></span>
@@ -79,9 +85,9 @@
         </div>
       </div>
 
-    <!--Property 4-->
+      <!--Property 4-->
       <div class="img"><a href="#"><img
-          src="https://remaxadvantagephilippines.com/wp-content/uploads/2018/11/34050219_805369152987531_885749825553825792_o.jpg?aki_policy=x_medium"></a>
+            src="https://remaxadvantagephilippines.com/wp-content/uploads/2018/11/34050219_805369152987531_885749825553825792_o.jpg?aki_policy=x_medium"></a>
         <div class="description">
           <h3>Terabyte Apartment</h3>
           <span class="star-button"><i class="fas fa-star"></i></span>
@@ -90,33 +96,34 @@
           <p1>₱ 6,000/month</p1>
         </div>
       </div>
-    
-    <!--Explore-->
-        <div class="explore">
-        <a href="#">Explore<i class="fas fa-arrow-right"></i></a>
-    </div>
-            
-        </section>
-        <p></p>
-    </main>
-</body>
 
-<footer>
+      <!--Explore-->
+
+
+    </section>
+    <div class="explore">
+      <a href="log-in.html">Explore<i class="fas fa-arrow-right"></i></a>
+    </div>
+    <p></p>
+  </main>
+  <footer>
     <div class="footer-p">
         <p>&copy; 2023 Alkila</p>
     </div>
-    
-<div class="footer-about">
-      <nav>
+
+    <div class="footer-about">
+    <nav>
         <ul>
-          <li><a href="#">Terms and Policies</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Help</a></li>
+            <a href="#">Terms and Policies</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About</a>
+            <a href="#">Help</a>
         </ul>
-      </nav>
+    </nav>
     </div>
     
 </footer>
-</html>
+</body>
 
+
+</html>

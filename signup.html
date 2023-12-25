@@ -4,6 +4,77 @@
 <head>
   <meta charset="utf-8">
   <title>Alkila - Sign up</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+
+    <script type="module">
+        const firebaseConfig =
+        {apiKey: "AIzaSyBpKOrw5OYM0O1BuNeYW11kqxsRhq4GZKs",                authDomain: "alkila-ad25f.firebaseapp.com",
+            projectId: "alkila-ad25f",
+            storageBucket: "alkila-ad25f.appspot.com",
+            messagingSenderId: "1081232925786",
+            appId: "1:1081232925786:web:c1474bb4d62e3248d0e463"
+        };
+
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+
+      $("#addData").click(function ()
+      {
+          var fnameData = $("#fname").val();
+          var contactData = $("#contact").val();
+          var usernameData = $("#registrationUsername").val();
+          var passwordData = $("#registrationPassword").val();
+
+          db.ref("account/client/" + usernameData).set(
+          {
+              Firstname: fnameData,
+              Contact: contactData,
+              Username: usernameData,
+              Password: passwordData
+          })
+              .then(() =>
+              {
+                  alert("Account successfully created!");
+              })
+              .catch((error) =>
+              {
+                  alert("Error writing data: " + error);
+              });
+      });
+
+      const clientRef = db.ref("account");
+
+      $("#login").click(function ()
+      {
+          var username = $("#loginUsername").val();
+          var password = $("#loginPassword").val();
+
+          const clientRef = db.ref("account/client/" + username);
+
+          clientRef.once("value")
+              .then((snapshot) =>
+              {
+                  const userData = snapshot.val();
+                  if (userData && userData.Password === password)
+                  {
+                      alert("Login Successfully");
+                  } else
+                  {
+                      alert("Login Failed. Details do not match");
+                  }
+              })
+              .catch((error) =>
+              {
+                  console.error("Error reading data: " + error);
+              });
+      });
+      
+</script>
+  </head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="signup.css" rel="stylesheet">
 </head>
@@ -11,7 +82,7 @@
 <body>
   <header class="header">
     <div class="logo-and-name">
-      <img src="logo/weblogo.png" alt="Logo" class="logo">
+      <img src="Images/weblogo.png" alt="Logo" class="logo">
       <h1 class="app-name">ALK</h1>
       <h1 class="app-name2">ILA</h1>
     </div>
@@ -28,57 +99,60 @@
       <div class="signup-container">
         <div class="title">Welcome to Alkila</div>
         <div class="content">
-          <form action="#">
-            <div class="user-details">
-              <div class="input-box">
-                <span class="details">Full Name</span>
-                <input type="text" placeholder="Enter name" required>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" id="fname" placeholder="Enter name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Username</span>
+                        <input type="text" id="registrationUsername" placeholder="Enter username" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Enter email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Contact Number</span>
+                        <input type="text" id="contact" placeholder="Enter contact number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" id="registrationPassword" placeholder="Enter password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="password" placeholder="Confirm password" required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+              <div class="button">
+                <input type="submit" value="Sign up" id="addData">
               </div>
-              <div class="input-box">
-                <span class="details">Username</span>
-                <input type="text" placeholder="Enter username" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Email</span>
-                <input type="text" placeholder="Enter email" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Contact Number</span>
-                <input type="text" placeholder="Enter contact number" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Password</span>
-                <input type="password" placeholder="Enter password" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Confirm Password</span>
-                <input type="password" placeholder="Confirm password" required>
-              </div>
-            </div>
-            <div class="gender-details">
-              <input type="radio" name="gender" id="dot-1">
-              <input type="radio" name="gender" id="dot-2">
-              <input type="radio" name="gender" id="dot-3">
-              <span class="gender-title">Gender</span>
-              <div class="category">
-                <label for="dot-1">
-                  <span class="dot one"></span>
-                  <span class="gender">Male</span>
-                </label>
-                <label for="dot-2">
-                  <span class="dot two"></span>
-                  <span class="gender">Female</span>
-                </label>
-                <label for="dot-3">
-                  <span class="dot three"></span>
-                  <span class="gender">Prefer not to say</span>
-                </label>
-              </div>
-            </div>
-            <div class="button">
-              <input type="submit" value="Sign up">
-            </div>
-          </form>
+                <div class="signup">
+                    Already have an account? <a class="login" href="log-in.html">Log in</a>
+                </div>
+            </form>
         </div>
       </div>
     </div>

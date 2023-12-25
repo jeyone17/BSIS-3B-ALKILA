@@ -281,3 +281,7 @@ form .button input:hover {
     flex-direction: column;
   }
 }
+
+#login-form a.signup {
+    color: #A4BF00;
+}
